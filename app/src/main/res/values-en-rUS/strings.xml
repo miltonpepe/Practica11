@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Es primo</string>
+    <string name="app_name">Calculadora de figuras</string>
 
     <string name="opc_darkmode">Dark mode</string>
-    <string name="es_primo">Is it prime?</string>
+    <string name="es_primo">Calculadora de figuras</string>
     <string name="verificar">Check</string>
     <string name="valor_requerido">A number is required</string>
     <string name="ingresa_valor">Please type a number</string>
@@ -11,4 +11,23 @@
     <string name="no_primo">Number %d is not prime!</string>
     <string name="hint">Number</string>
     <string name="desc_fondo">Background</string>
+    <string name="titulo_2">Select a figure to calculate its area</string>
+    <string name="ingresa_numero">Enter a number</string>
+
+    <string name="t_base">Base</string>
+    <string name="t_altura">Height</string>
+
+    <string name="r_ladom">Larger side</string>
+    <string name="r_ladomm">Minor side</string>
+
+    <string name="p_apotema">Apothem</string>
+    <string name="p_lado">Side</string>
+
+    <string name="msj_selection">You have selected the</string>
+    <string name="desarrollador">Developer: Milton Fernández</string>
+
+    <string name="version">Versión 1.0</string>
+
+    <string name="resultado_hint">Result</string>
+
 </resources>

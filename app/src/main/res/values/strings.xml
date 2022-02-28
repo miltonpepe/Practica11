@@ -1,14 +1,37 @@
 <resources>
-    <string name="app_name">Es primo</string>
+    <string name="app_name">Calculadora de figuras</string>
+
+    <string name="es_primo">Calculadora de figuras</string>
 
     <string name="opc_darkmode">Modo oscuro</string>
-    <string name="es_primo">¿Es primo?</string>
+    <string name="title_main" translatable="false">Selecciona una figura para calcular su área!</string>
     <string name="verificar">Verificar</string>
     <string name="valor_requerido">Se requiere un número</string>
-    <string name="ingresa_valor">Por favor ingresa un número</string>
+    <string name="ingresa_valor">Por favor llena todos los campos</string>
     <string name="si_primo">¡El número %1$d sí es primo%2$s</string>
     <string name="no_primo">¡El número %d no es primo!</string>
     <string name="hint">Número</string>
     <string name="desc_fondo">Fondo</string>
+    <string name="titulo_2">Selecciona el una figura para calcular su área</string>
+    <string name="ingresa_numero">Ingresa un número</string>
+
+    <string name="t_base">Base</string>
+    <string name="t_altura">Altura</string>
+
+    <string name="r_ladom">Lado mayor</string>
+    <string name="r_ladomm">Lado menor</string>
+
+    <string name="p_apotema">Apotema</string>
+    <string name="p_lado">Lado</string>
+
+    <string name="msj_selection">Has seleccionado el</string>
+
+    <string name="desarrollador">Desarrollador: Milton Fernández</string>
+
+    <string name="version">Versión 1.0</string>
+
+
+    <string name="resultado_hint">Resultado</string>
+
 
 </resources>

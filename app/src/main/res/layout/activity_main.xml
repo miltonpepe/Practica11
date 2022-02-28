@@ -5,87 +5,176 @@
     android:id="@+id/cl"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/back2"
+    android:background="@drawable/img"
     tools:context=".MainActivity">
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/appBarLayout"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="@style/Theme.EsPrimo.AppBarOverlay"
+        android:layout_height="match_parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        tools:layout_editor_absoluteY="77dp">
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
+        <TextView
+            android:id="@+id/tvResultado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="15dp"
+            android:fontFamily="@font/bryndanwrite"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            app:layout_constraintBottom_toTopOf="@+id/inputa"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView"
+            tools:text="El número 11 sí es primo" />
+
+        <TextView
+            android:id="@+id/tvTitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/bryndanwrite"
+            android:text="@string/title_main"
+            android:textColor="@color/black"
+            android:textSize="40sp"
+            app:layout_constraintBottom_toTopOf="@+id/imageView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appBarLayout"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <EditText
+            android:id="@+id/inputa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="92dp"
+            android:background="@color/white"
+            android:ems="10"
+            android:hint="@string/ingresa_numero"
+            android:inputType="textPersonName"
+            android:maxLength="5"
+            android:minHeight="48dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.527"
+            app:layout_constraintStart_toEndOf="@+id/label1"
+            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+        <TextView
+            android:id="@+id/label1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="84dp"
+            android:layout_marginTop="112dp"
+            android:background="@color/white"
+            android:text="label1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+        <EditText
+            android:id="@+id/inputb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="36dp"
+            android:background="@color/white"
+            android:ems="10"
+            android:hint="@string/ingresa_numero"
+            android:inputType="textPersonName"
+            android:maxLength="5"
+            android:minHeight="48dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.527"
+            app:layout_constraintStart_toEndOf="@+id/label2"
+            app:layout_constraintTop_toBottomOf="@+id/inputa" />
+
+        <TextView
+            android:id="@+id/label2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="84dp"
+            android:layout_marginTop="60dp"
+            android:background="@color/white"
+            android:text="label1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/label1" />
+
+        <Button
+            android:id="@+id/btnVerificar"
+            android:layout_width="202dp"
+            android:layout_height="58dp"
+            android:layout_marginStart="104dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="105dp"
+            android:onClick="clic"
+            android:text="@string/verificar"
+            android:textAllCaps="false"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/inputb" />
+
+        <Spinner
+            android:id="@+id/Spinner01"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:spinnerMode="dialog"
+            app:layout_constraintBottom_toTopOf="@+id/imageView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTitulo"
+            app:layout_constraintVertical_bias="0.631" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="25dp"
+            app:layout_constraintBottom_toTopOf="@+id/tvResultado"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Spinner01"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayout"
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            app:popupTheme="@style/Theme.EsPrimo.AppBarOverlay" />
+            android:layout_height="wrap_content"
+            android:theme="@style/Theme.EsPrimo.AppBarOverlay">
 
-    </com.google.android.material.appbar.AppBarLayout>
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:popupTheme="@style/Theme.EsPrimo.AppBarOverlay" />
 
-    <TextView
-        android:id="@+id/tvTitulo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/bryndanwrite"
-        android:text="@string/es_primo"
-        android:textColor="@color/white"
-        android:textSize="40sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.168" />
+        </com.google.android.material.appbar.AppBarLayout>
 
-    <EditText
-        android:id="@+id/etNumero"
-        android:layout_width="198dp"
-        android:layout_height="66dp"
-        android:ems="10"
-        android:fontFamily="@font/bryndanwrite"
-        android:hint="@string/hint"
-        android:inputType="number"
-        android:maxLength="5"
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textColorHint="@color/white"
-        android:textSize="40sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.3" />
+        <TextView
+            android:id="@+id/resFinal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:hint="@string/resultado_hint"
+            android:textSize="34sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnVerificar" />
 
-    <TextView
-        android:id="@+id/tvResultado"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/bryndanwrite"
-        android:textColor="@color/white"
-        android:textSize="25sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/appBarLayout"
-        app:layout_constraintVertical_bias="0.45"
-        tools:text="El número 11 sí es primo" />
-
-    <Button
-        android:id="@+id/btnVerificar"
-        android:layout_width="202dp"
-        android:layout_height="58dp"
-        android:onClick="click"
-        android:text="@string/verificar"
-        android:textAllCaps="false"
-        android:textSize="22sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.61" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
